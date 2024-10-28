@@ -1,4 +1,4 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
 import {
   TypedUseSelectorHook,
@@ -6,7 +6,12 @@ import {
   useSelector as selectorHook
 } from 'react-redux';
 
-const rootReducer = () => {}; // Заменить на импорт настоящего редьюсера
+import { feedSlice } from '../services/slices/feed';
+
+const rootReducer = () =>
+  combineReducers({
+    [feedSlice.name]: feedSlice.reducer
+  }); // Заменить на импорт настоящего редьюсера
 
 const store = configureStore({
   reducer: rootReducer,
@@ -21,3 +26,4 @@ export const useDispatch: () => AppDispatch = () => dispatchHook();
 export const useSelector: TypedUseSelectorHook<RootState> = selectorHook;
 
 export default store;
+
