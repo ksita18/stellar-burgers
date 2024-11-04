@@ -107,9 +107,23 @@ const App = () => {
           />
 
           <Route path='/profile'>
-            <Route index element={<Profile />} />
+            <Route
+              index
+              element={
+                <ProtectedRoute>
+                  <Profile />
+                </ProtectedRoute>
+              }
+            />
             <Route path='orders'>
-              <Route index element={<ProfileOrders />} />
+              <Route
+                index
+                element={
+                  <ProtectedRoute>
+                    <ProfileOrders />
+                  </ProtectedRoute>
+                }
+              />
               <Route
                 path=':number'
                 element={

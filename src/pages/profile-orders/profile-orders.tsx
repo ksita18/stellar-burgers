@@ -1,5 +1,4 @@
 import { ProfileOrdersUI } from '@ui-pages';
-import { TOrder } from '@utils-types';
 import { FC } from 'react';
 import { useAction } from '../../hooks/useAction';
 import { ordersActions } from '../../services/slices/orders';
@@ -9,7 +8,7 @@ import { Preloader } from '@ui';
 
 export const ProfileOrders: FC = () => {
   /** TODO: взять переменную из стора */
-  const orders: TOrder[] = useSelector(getOrders);
+  const orders = useSelector(getOrders);
   const ordersLoading = useSelector(getOrdersLoading);
   const { getOrdersThunk } = useAction(ordersActions);
 

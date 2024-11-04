@@ -21,8 +21,6 @@ export const Register: FC = () => {
     registerUserThunk({ name: userName, email, password });
     if (isAuthenticated) {
       loginUserThunk({ email, password });
-    } else {
-      console.log(error);
     }
   };
 
