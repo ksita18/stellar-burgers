@@ -7,7 +7,6 @@ import { useSelector } from '../../services/store';
 import { useEffect } from 'react';
 import { useAction } from '../../hooks/useAction';
 
-
 export const Feed: FC = () => {
   const orders: TOrder[] = useSelector(getFeedOrders);
 

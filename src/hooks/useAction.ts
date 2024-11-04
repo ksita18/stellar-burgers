@@ -1,4 +1,4 @@
-import { useDispatch } from 'src/services/store';
+import { useDispatch } from '../services/store';
 import { useMemo } from 'react';
 import {
   ActionCreatorsMapObject,
