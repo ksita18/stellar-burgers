@@ -1,4 +1,4 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
 import {
   TypedUseSelectorHook,
@@ -6,7 +6,21 @@ import {
   useSelector as selectorHook
 } from 'react-redux';
 
-const rootReducer = () => {}; // Заменить на импорт настоящего редьюсера
+import { feedSlice } from './slices/feedSlice';
+import { ingredientsSlice } from './slices/ingredientsSlice';
+import { constructorSlice } from './slices/burgerConstructorSlice';
+import { orderSlice } from './slices/orderSlice';
+import { ordersSlice } from './slices/ordersSlice';
+import { userSlice } from './slices/userSlice';
+
+export const rootReducer = combineReducers({
+  [feedSlice.name]: feedSlice.reducer,
+  [ingredientsSlice.name]: ingredientsSlice.reducer,
+  [constructorSlice.name]: constructorSlice.reducer,
+  [orderSlice.name]: orderSlice.reducer,
+  [ordersSlice.name]: ordersSlice.reducer,
+  [userSlice.name]: userSlice.reducer
+}); // Заменить на импорт настоящего редьюсера
 
 const store = configureStore({
   reducer: rootReducer,

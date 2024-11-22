@@ -1,14 +1,31 @@
 import { FC, memo } from 'react';
 import { BurgerConstructorElementUI } from '@ui';
 import { BurgerConstructorElementProps } from './type';
+import { useAction } from '../../hooks/useAction';
+import { constructorActions } from '../../services/slices/burgerConstructorSlice';
 
 export const BurgerConstructorElement: FC<BurgerConstructorElementProps> = memo(
-  ({ ingredient, index, totalItems }) => {
-    const handleMoveDown = () => {};
+  ({ ingredient, index, totalItems, ...rest }) => {
+    const { reorderConstructor, removeFromConstructor } =
+      useAction(constructorActions);
 
-    const handleMoveUp = () => {};
+    const handleMoveDown = () => {
+      reorderConstructor({
+        from: index,
+        to: index + 1
+      });
+    };
 
-    const handleClose = () => {};
+    const handleMoveUp = () => {
+      reorderConstructor({
+        from: index,
+        to: index - 1
+      });
+    };
+
+    const handleClose = () => {
+      removeFromConstructor(index);
+    };
 
     return (
       <BurgerConstructorElementUI
@@ -18,6 +35,7 @@ export const BurgerConstructorElement: FC<BurgerConstructorElementProps> = memo(
         handleMoveUp={handleMoveUp}
         handleMoveDown={handleMoveDown}
         handleClose={handleClose}
+        {...rest}
       />
     );
   }

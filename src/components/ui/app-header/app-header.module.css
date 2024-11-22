@@ -19,6 +19,9 @@
   text-decoration: none;
   color: var(--text-inactive-color);
 }
+.link:hover {
+  opacity: 0.8;
+}
 
 .link_active {
   color: var(--text-primary-color);
@@ -34,4 +37,13 @@
   display: flex;
   align-items: center;
   margin: 0 auto;
+  transition: 0.5s cubic-bezier(0.57, 1.84, 0.35, 0.6);
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo:active {
+  transform: scale(0.98);
 }
