@@ -6,14 +6,14 @@ import {
   useSelector as selectorHook
 } from 'react-redux';
 
-import { feedSlice } from '../services/slices/feed';
-import { ingredientsSlice } from '../services/slices/ingredients';
-import { constructorSlice } from '../services/slices/burgerConstructor';
-import { orderSlice } from '../services/slices/order';
-import { ordersSlice } from '../services/slices/orders';
-import { userSlice } from '../services/slices/user';
+import { feedSlice } from './slices/feedSlice';
+import { ingredientsSlice } from './slices/ingredientsSlice';
+import { constructorSlice } from './slices/burgerConstructorSlice';
+import { orderSlice } from './slices/orderSlice';
+import { ordersSlice } from './slices/ordersSlice';
+import { userSlice } from './slices/userSlice';
 
-const rootReducer = combineReducers({
+export const rootReducer = combineReducers({
   [feedSlice.name]: feedSlice.reducer,
   [ingredientsSlice.name]: ingredientsSlice.reducer,
   [constructorSlice.name]: constructorSlice.reducer,

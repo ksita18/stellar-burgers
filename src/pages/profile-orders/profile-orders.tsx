@@ -1,8 +1,8 @@
 import { ProfileOrdersUI } from '@ui-pages';
 import { FC } from 'react';
 import { useAction } from '../../hooks/useAction';
-import { ordersActions } from '../../services/slices/orders';
-import { getOrders, getOrdersLoading } from '../../services/slices/orders';
+import { ordersActions } from '../../services/slices/ordersSlice';
+import { getOrders, getOrdersLoading } from '../../services/slices/ordersSlice';
 import { useSelector } from '../../services/store';
 import { Preloader } from '@ui';
 

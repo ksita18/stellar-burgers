@@ -5,7 +5,7 @@ import {
   getUserError,
   getUserIsAuthenticated,
   userActions
-} from '../../services/slices/user';
+} from '../../services/slices/userSlice';
 import { useAction } from '../../hooks/useAction';
 
 export const Register: FC = () => {

@@ -7,14 +7,14 @@ import {
   getOrderModalData,
   getOrderRequest,
   orderActions
-} from '../../services/slices/order';
+} from '../../services/slices/orderSlice';
 import {
   constructorActions,
   getConstructorBun,
   getConstructorIngredients
-} from '../../services/slices/burgerConstructor';
+} from '../../services/slices/burgerConstructorSlice';
 import { useSelector } from '../../services/store';
-import { getUser } from '../../services/slices/user';
+import { getUser } from '../../services/slices/userSlice';
 
 export const BurgerConstructor: FC = () => {
   const navigate = useNavigate();

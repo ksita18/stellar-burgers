@@ -1,7 +1,7 @@
 import { Preloader } from '@ui';
 import { FeedUI } from '@ui-pages';
 import { FC } from 'react';
-import { getFeedOrders, feedActions } from '../../services/slices/feed';
+import { getFeedOrders, feedActions } from '../../services/slices/feedSlice';
 import { useSelector } from '../../services/store';
 import { useEffect } from 'react';
 import { useAction } from '../../hooks/useAction';

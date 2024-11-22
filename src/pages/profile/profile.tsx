@@ -1,6 +1,6 @@
 import { ProfileUI } from '@ui-pages';
 import { FC, SyntheticEvent, useEffect, useState } from 'react';
-import { getUser, userActions } from '../../services/slices/user';
+import { getUser, userActions } from '../../services/slices/userSlice';
 import { useSelector } from '../../services/store';
 import { useAction } from '../../hooks/useAction';
 

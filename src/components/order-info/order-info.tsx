@@ -4,9 +4,12 @@ import { OrderInfoUI } from '../ui/order-info';
 import { TIngredient } from '@utils-types';
 import { useParams } from 'react-router-dom';
 import { useAction } from '../../hooks/useAction';
-import { getOrderByNumber, orderActions } from '../../services/slices/order';
+import {
+  getOrderByNumber,
+  orderActions
+} from '../../services/slices/orderSlice';
 import { useSelector } from '../../services/store';
-import { getIngredients } from '../../services/slices/ingredients';
+import { getIngredients } from '../../services/slices/ingredientsSlice';
 
 export const OrderInfo: FC = () => {
   /** TODO: взять переменные orderData и ingredients из стора */

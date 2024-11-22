@@ -16,8 +16,8 @@ import { AppHeader, IngredientDetails, OrderInfo, Modal } from '@components';
 import { Routes, Route, useLocation, useMatch } from 'react-router-dom';
 import { ProtectedRoute } from '../protected-route';
 import { useAction } from '../../hooks/useAction';
-import { ingredientsActions } from '../../services/slices/ingredients';
-import { userActions } from '../../services/slices/user';
+import { ingredientsActions } from '../../services/slices/ingredientsSlice';
+import { userActions } from '../../services/slices/userSlice';
 import { useEffect } from 'react';
 
 const App = () => {

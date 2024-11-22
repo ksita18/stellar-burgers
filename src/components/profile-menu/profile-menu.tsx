@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { ProfileMenuUI } from '@ui';
 import { useAction } from '../../hooks/useAction';
-import { userActions } from '../../services/slices/user';
+import { userActions } from '../../services/slices/userSlice';
 
 export const ProfileMenu: FC = () => {
   const navigate = useNavigate();
